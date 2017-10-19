@@ -12,10 +12,7 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
     case INCREMENT_REQUESTED:
-      return {
-        ...state,
-        isIncrementing: true
-      }
+      return Object.assign({},state,{ isIncrementing: true });
 
     case INCREMENT:
       return {
@@ -25,10 +22,7 @@ export default (state = initialState, action) => {
       }
 
     case DECREMENT_REQUESTED:
-      return {
-        ...state,
-        isDecrementing: true
-      }
+      return Object.assign({}, state, { isDecrementing: true });
 
     case DECREMENT:
       return {
